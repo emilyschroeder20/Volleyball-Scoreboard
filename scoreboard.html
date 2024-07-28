@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Volleyball Scoreboard</title>
+        <link rel="stylesheet" href="scoreboard.css">
+        <meta charset="UTF-8">
+        <meta name="description" content="Volleyball Scoreboard">
+        <meta name="author" content="Emily Schroeder">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- viewport line is meant to set the viewport to make your website look good on all devices-->
+        <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <script src="scoreboard.js"></script>
+        <div class="row TitleRow">
+            <div class="col-12">
+                <h1 id="title" class="center">Volleyball Scorecard</h1>
+            </div>
+        </div>
+        <div class="row FormRow">
+            <div class="col-12">
+                <form onsubmit="return processTeams()" class="center">
+                    <label for="teamOne">Enter Team 1:</label>
+                    <input type="text" name="teamOne" id="teamOne" required>
+                    <label for="teamTwo">Enter Team 2:</label>
+                    <input type="text" name="teamTwo" id="teamTwo" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div id="scoreboard" class="row ScoreboardRow">
+            <div id="team1ScoreBox" class="col-6 teamScoreBox">
+                <div class="centerHor">
+                    <h2 id="teamOneName"></h2>
+                    <div id="teamOneGames">0</div>
+                </div>
+                <button id="teamOneScore" class="centerHor score" onclick="increment(this)" style="font-family: 'Orbitron', sans-serif;">0</button>
+                <button id="teamOneMinus" class="centerHor minus" onclick="minusOne()">-1</button>
+            </div>
+            <div id="team2ScoreBox" class="col-6 teamScoreBox">
+                <div class="centerHor">
+                    <h2 id="teamTwoName"></h2>
+                    <div id="teamTwoGames">0</div>
+                </div>
+                <button id="teamTwoScore" class="centerHor score" onclick="increment(this)" style="font-family: 'Orbitron', sans-serif;">0</button>
+                <button id="teamTwoMinus" class="centerHor minus" onclick="minusTwo()">-1</button>
+            </div>
+        </div>
+        <div class="row ButtonRow">
+            <div class="col-4">
+                <button onclick="save()" id="saveButton" class="center button">Save Scores</button>
+            </div>
+            <div class="col-4">
+                <button onclick="reset()" id="resetButton" class="center button">Reset Scores</button>
+            </div>
+            <div class="col-4">
+                <button onclick="resetAll()" id="resetButton" class="center button">Reset All</button>
+            </div>
+        </div>
+        <div class="row HistoryRow">
+            <div id="history" class="col-12">
+                <h2 id="historyHeader" class="center">History</h2>
+                <p id="historyBody" class="center"></p>
+            </div>
+        </div>
+    </body>
+</html>

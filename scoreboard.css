@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+body {
+    color: #FFFFFF;
+    background: #3F3F3F;
+}
+
+/* Extra small devices (phones,
+600px and down) max-width:600px*/
+[class*="col-"] {
+    width: 100%;
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+}
+
+/* Medium devices (landscape
+ tables, 786px and up) */
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.centerHor {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.centerVert {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: #000000;
+    border-radius: 3vmin;
+    font-size: 5vmin;
+    color: #FFFFFF;
+}
+
+.teamScoreBox, .ScoreboardRow {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+#teamOneScore, #teamOneMinus, #teamOneGames {
+    background: red;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#teamOneScore, #teamTwoScore {
+    font-size: 30vmin;
+    width: 50vmin;
+    height: 50vmin;
+    border-radius: 3vmin;
+}
+
+#teamOneMinus, #teamOneGames, #teamTwoMinus, #teamTwoGames {
+    width: 10vmin;
+    height: 10vmin;
+    border-radius: 3vmin;
+}
+
+.winner {
+    background-color: #0bfc03 !important;
+}
+
+#teamTwoScore, #teamTwoMinus, #teamTwoGames {
+    background: blue;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin: auto;
+    font-size: 10vmin;
+}
+
+h1 {
+    text-align: center;
+    margin: auto;
+    font-size: 15vmin;
+}
