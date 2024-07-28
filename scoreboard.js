@@ -2,21 +2,10 @@ let teamOne = ""
 let teamTwo = ""
 let gameCount=0
 
-function processTeams() {
-    document.getElementById("scoreboard").classList.add("show")
-    
+function processTeams() {    
     teamOne = document.getElementById("teamOne").value
-    if (teamOne!=""){
-        console.log("Make Team One Visible")
-        document.getElementById("team1ScoreBox").classList.add("show")
-        document.getElementById("scoreboard").classList.add("show")
-    }
     document.getElementById("teamOneName").textContent = teamOne
     teamTwo = document.getElementById("teamTwo").value
-    if (teamTwo!=""){
-        console.log("Make Team Two Visible")
-        document.getElementById("team2ScoreBox").classList.add("show")
-    }
     document.getElementById("teamTwoName").textContent = teamTwo
     return false
 }
@@ -82,7 +71,6 @@ function save(){
     let history = document.getElementById("historyBody")
     numOne = Number(score1.textContent)
     numTwo = Number(score2.textContent)
-    //result=checkScore(numOne, numTwo)
     winner=""
     loser=""
     if (numOne>numTwo){
